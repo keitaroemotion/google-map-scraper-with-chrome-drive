@@ -28,8 +28,13 @@ def write_log(text):
     print(text)
     logging.info("{}|{}".format(datetime.now, text))
 
+def get_option():
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    return options
+
 def query_google_map(key):
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=get_option())
     wait = WebDriverWait(driver, 7)
     driver.get("https://www.google.com/search?q=italian&tbm=lcl")
 
