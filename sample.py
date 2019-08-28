@@ -36,7 +36,9 @@ def get_option():
 def query_google_map(key):
     driver = webdriver.Chrome(options=get_option())
     wait = WebDriverWait(driver, 7)
-    driver.get("https://www.google.com/search?q=italian&tbm=lcl")
+  # driver.get("https://www.google.com/search?q=italian&tbm=lcl")
+  # driver.get("https://www.google.com/search?adtest=on&q=italian&tbm=lcl")
+    driver.get("https://www.google.com/search?adtest=on&query=%E6%9C%AD%E5%B9%8C+%E3%82%82%E3%81%A4%E9%8D%8B&uule=w+CAIQICIWc2FwcG9ybyxob2trYWlkbyxqYXBhbg&pws=0&hl=ja&tbm=lcl&glp=1&tci=g:1009076")
 
     write_log(get_element(driver, wait, "class", "BBj6N"))
     write_log(get_element(driver, wait, "id",    "rcnt"))
