@@ -5,7 +5,7 @@ from selenium.webdriver.common.by  import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support    import expected_conditions as ec
-from   datetime import datetime
+from datetime                      import datetime
 import logging
 import re
 import time
